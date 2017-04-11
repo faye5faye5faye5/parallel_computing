@@ -22,5 +22,7 @@ int main(int argc char * argv[]) {
         exit(1);
     }
 
+    find_primes(N, t);
+
     return 0;
 }
