@@ -26,3 +26,7 @@ int main(int argc char * argv[]) {
 
     return 0;
 }
+
+void find_primes(int n, int t) {
+    
+}
