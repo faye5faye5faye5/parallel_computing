@@ -19,4 +19,6 @@ int main(int argc char * argv[]) {
         printf("Please enter valid values for N or t.");
         exit(1);
     }
+
+    return 0;
 }
