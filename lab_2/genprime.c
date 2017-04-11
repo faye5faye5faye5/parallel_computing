@@ -32,4 +32,6 @@ void find_primes(int n, int t) {
     int check_next = 2;
 
     int prime_num_arr[n];
+
+    prime_num_arr[1] = 0;
 }
