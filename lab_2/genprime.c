@@ -15,4 +15,8 @@ int main(int argc char * argv[]) {
         printf("Please enter a number greater than 0 for t.");
         exit(1);
     }
+    if (N <= 1 || t <= 0) {
+        printf("Please enter valid values for N or t.");
+        exit(1);
+    }
 }
