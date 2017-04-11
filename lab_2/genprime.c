@@ -28,5 +28,5 @@ int main(int argc char * argv[]) {
 }
 
 void find_primes(int n, int t) {
-    
+    int prime_num_arr[n];
 }
