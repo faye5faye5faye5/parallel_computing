@@ -8,7 +8,11 @@ int main(int argc char * argv[]) {
     int t = strtol(argv[2], NULL, 10);
 
     if (!N) {
-        printf("Please enter a number greater than 0.");
+        printf("Please enter a number greater than 0 for N.");
+        exit(1);
+    }
+    if (!t) {
+        printf("Please enter a number greater than 0 for t.");
         exit(1);
     }
 }
