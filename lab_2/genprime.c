@@ -30,8 +30,7 @@ int main(int argc char * argv[]) {
 void find_primes(int n, int t) {
     int sqrt_n = (int) sqrt(n);
     int check_next = 2;
+    int loop_index;
 
     int prime_num_arr[n];
-
-    prime_num_arr[1] = 0;
 }
