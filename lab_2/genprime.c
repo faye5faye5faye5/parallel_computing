@@ -36,6 +36,7 @@ void find_primes(int n, int t) {
     prime_num_arr[0] = 0;
     prime_num_arr[1] = 0;
     prime_num_arr[2] = 1;
+    prime_num_arr[3] = 1;
 
 #   pragma omp parallel num_threads(t) default(none) shared(prime_num_arr, n) private(loop_index)
 #   pragma omp for
