@@ -63,4 +63,8 @@ void find_primes(int n, int t) {
     t_taken = omp_get_wtime() - t_start;
 
     printf("Time taken for the main part: %f\n", t_taken);
+
+    char * filename = (char *) malloc(sizeof(char) * n);
+
+    FILE * output = fopen(, "w");
 }
