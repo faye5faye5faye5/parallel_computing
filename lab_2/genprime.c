@@ -6,8 +6,8 @@
 void find_primes(int n, int t);
 
 int main(int argc char * argv[]) {
-    int N = strtol(argv[1], NULL, 10);
-    int t = strtol(argv[2], NULL, 10);
+    int N = atoi(argv[1]);
+    int t = atoi(argv[2]);
 
     if (!N) {
         printf("Please enter a number greater than 0 for N.");
