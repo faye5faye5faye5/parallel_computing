@@ -30,6 +30,7 @@ int main(int argc char * argv[]) {
 void find_primes(int n, int t) {
     int sqrt_n = (int) sqrt(n);
     int loop_index;
+    int inner_loop_index;
 
     int prime_num_arr[n];
 
@@ -47,7 +48,6 @@ void find_primes(int n, int t) {
     for (loop_index = 2; loop_index < sqrt_n; loop_index += 1) {
 
         if (prime_num_arr[loop_index]) {
-            int inner_loop_index;
 
 #           pragma omp for
             for (inner_loop_index = loop_index * 2; inner_loop_index < n; inner_loop_index += loop_index) {
