@@ -41,6 +41,8 @@ void find_primes(int n, int t) {
 
     double t_start = 0.0, t_end = 0.0, t_taken;
 
+    t_start = omp_get_wtime();
+
 #   pragma omp parallel num_threads(t) default(none) shared(prime_num_arr, n) private(loop_index, inner_loop_index)
 #   pragma omp for
     for (outer_loop_index = 4; outer_loop_index < n; outer_loop_index += 1) {
