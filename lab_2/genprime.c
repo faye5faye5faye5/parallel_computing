@@ -33,15 +33,19 @@ void find_primes(int n, int t) {
 
     int prime_num_arr[n];
 
+    prime_num_arr[0] = 0;
+    prime_num_arr[1] = 0;
+    prime_num_arr[2] = 1;
+
 #   pragma omp parallel num_threads(t) default(none) shared(prime_num_arr, n) private(loop_index)
 #   pragma omp for
-    for (loop_index = 0; loop_index < n; loop_index += 1) {
+    for (loop_index = 4; loop_index < n; loop_index += 1) {
         prime_num_arr[loop_index] = 0;
     }
 
     for (loop_index = 2; loop_index < sqrt_n; loop_index += 1) {
 
-        if (!prime_num_arr[loop_index]) {
+        if (prime_num_arr[loop_index]) {
             int inner_loop_index;
 
 #           pragma omp for
