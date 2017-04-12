@@ -29,7 +29,7 @@ int main(int argc char * argv[]) {
 
 void find_primes(int n, int t) {
     int sqrt_n = (int) sqrt(n);
-    int loop_index;
+    int outer_loop_index;
     int inner_loop_index;
 
     int prime_num_arr[n];
@@ -39,18 +39,18 @@ void find_primes(int n, int t) {
     prime_num_arr[2] = 1;
     prime_num_arr[3] = 1;
 
-#   pragma omp parallel num_threads(t) default(none) shared(prime_num_arr, n) private(loop_index)
+#   pragma omp parallel num_threads(t) default(none) shared(prime_num_arr, n) private(loop_index, inner_loop_index)
 #   pragma omp for
-    for (loop_index = 4; loop_index < n; loop_index += 1) {
+    for (outer_loop_index = 4; outer_loop_index < n; outer_loop_index += 1) {
         prime_num_arr[loop_index] = 0;
     }
 
-    for (loop_index = 2; loop_index < sqrt_n; loop_index += 1) {
+    for (outer_loop_index = 2; outer_loop_index < sqrt_n; outer_loop_index += 1) {
 
-        if (prime_num_arr[loop_index]) {
+        if (prime_num_arr[outer_loop_index]) {
 
 #           pragma omp for
-            for (inner_loop_index = loop_index * 2; inner_loop_index < n; inner_loop_index += loop_index) {
+            for (inner_loop_index = loop_index * 2; inner_loop_index < n; inner_loop_index += outer_loop_index) {
                 prime_num_arr[inner_loop_index] = 1;
             }
         }
