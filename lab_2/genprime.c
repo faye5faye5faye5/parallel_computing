@@ -39,7 +39,7 @@ void find_primes(int n, int t) {
     prime_num_arr[2] = 1;
     prime_num_arr[3] = 1;
 
-    double t_start = 0.0, t_end = 0.0, t_taken;
+    double t_start = 0.0, t_taken;
 
     t_start = omp_get_wtime();
 
@@ -59,4 +59,6 @@ void find_primes(int n, int t) {
             }
         }
     }
+
+    t_taken = omp_get_wtime() - t_start;
 }
