@@ -45,7 +45,7 @@ void find_primes(int n, int t) {
             int inner_loop_index;
 
 #           pragma omp for
-            for (inner_loop_index = loop_index * 2; inner_loop_index < n; inner_loop_index += inner_loop_index) {
+            for (inner_loop_index = loop_index * 2; inner_loop_index < n; inner_loop_index += loop_index) {
                 prime_num_arr[inner_loop_index] = 1;
             }
         }
