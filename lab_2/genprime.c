@@ -40,5 +40,12 @@ void find_primes(int n, int t) {
         prime_num_arr[loop_index] = 0;
     }
 
-    
+    for (loop_index = 2; loop_index < sqrt_n; loop_index += 1) {
+
+        if (!prime_num_arr[loop_index]) {
+
+#           pragma omp for
+            
+        }
+    }
 }
