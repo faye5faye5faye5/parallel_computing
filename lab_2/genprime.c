@@ -65,6 +65,8 @@ void find_primes(int n, int t) {
     printf("Time taken for the main part: %f\n", t_taken);
 
     char * filename = (char *) malloc(sizeof(char) * (n + 5));
+    filename[n + 5] = "\0"
+    sprintf(filename, "%d.txt")
 
-    FILE * output = fopen(, "w");
+    FILE * output = fopen(filename, "w");
 }
