@@ -75,4 +75,8 @@ void find_primes(int n, int t) {
         printf("Something went wrong when opening the output file.\n");
         exit(1);
     }
+
+    for (outer_loop_index = 0; outer_loop_index < n; outer_loop_index += 1) {
+        
+    }
 }
