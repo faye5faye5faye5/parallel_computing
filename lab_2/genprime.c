@@ -90,7 +90,4 @@ void find_primes(int n, int t) {
     }
 
     fclose(output);
-
-    free(prime_num_arr);
-    free(filename);
 }
