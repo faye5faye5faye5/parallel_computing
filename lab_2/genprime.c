@@ -69,4 +69,9 @@ void find_primes(int n, int t) {
     sprintf(filename, "%d.txt")
 
     FILE * output = fopen(filename, "w");
+
+    if (!output) {
+        printf("Something went wrong when opening the output file.\n");
+        exit(1);
+    }
 }
