@@ -67,7 +67,7 @@ void find_primes(int n, int t) {
 
     int length = (int) log10(n) + 1;
 
-    char * filename = (char *) malloc(sizeof(char) * (length + 5));
+    char filename[length + 5];
     filename[length + 5] = "\0";
     sprintf(filename, "%d.txt");
 
