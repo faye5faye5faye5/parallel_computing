@@ -89,6 +89,7 @@ void find_primes(int n, int t) {
             fputs(", ", filename);
             fputs(outer_loop_index - prev_prime, filename);
             prev_prime = outer_loop_index;
+            fputs("\n", filename);
         }
     }
 }
