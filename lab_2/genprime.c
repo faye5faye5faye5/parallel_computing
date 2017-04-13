@@ -77,7 +77,12 @@ void find_primes(int n, int t) {
         exit(1);
     }
 
+    int prime_num_rank = 1;
+
     for (outer_loop_index = 0; outer_loop_index < n; outer_loop_index += 1) {
 
+        if (prime_num_rank[outer_loop_index]) {
+            
+        }
     }
 }
