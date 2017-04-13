@@ -83,20 +83,14 @@ void find_primes(int n, int t) {
     for (outer_loop_index = 0; outer_loop_index < n; outer_loop_index += 1) {
 
         if (prime_num_arr[outer_loop_index]) {
-            fputs(prime_num_rank, output);
-            fputs(", ", output);
-            fputs(outer_loop_index, output);
-            fputs(", ", output);
-            fputs(outer_loop_index - prev_prime, output);
-
+            fprintf(output, "%d, %d, %d\n", prime_num_rank, outer_loop_index, outer_loop_index - prev_prime);
             prev_prime = outer_loop_index;
             prime_num_rank += 1;
-
-            fputs("\n", output);
         }
     }
 
+    fclose(output);
+
     free(prime_num_arr);
     free(filename);
-    fclose(output);
 }
