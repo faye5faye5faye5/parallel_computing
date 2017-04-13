@@ -88,8 +88,10 @@ void find_primes(int n, int t) {
             fputs(outer_loop_index, output);
             fputs(", ", output);
             fputs(outer_loop_index - prev_prime, output);
+
             prev_prime = outer_loop_index;
             prime_num_rank += 1;
+
             fputs("\n", output);
         }
     }
