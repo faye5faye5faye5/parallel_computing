@@ -50,11 +50,12 @@ void find_primes(int n, int t) {
         prime_num_arr[outer_loop_index] = 1;
     }
 
+#   pragma omp for schedule(static, 1)
     for (outer_loop_index = 2; outer_loop_index < sqrt_n; outer_loop_index += 1) {
 
         if (prime_num_arr[outer_loop_index]) {
 
-#           pragma omp for
+// #           pragma omp for
             for (inner_loop_index = outer_loop_index * 2; inner_loop_index < n; inner_loop_index += outer_loop_index) {
                 prime_num_arr[inner_loop_index] = 0;
             }
