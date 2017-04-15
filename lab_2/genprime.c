@@ -51,7 +51,7 @@ void find_primes(int n, int t) {
 
     t_start = omp_get_wtime();
 
-#   pragma omp for
+// #   pragma omp for
     for (outer_loop_index = 2; outer_loop_index < sqrt_n; outer_loop_index += 1) {
 
         if (prime_num_arr[outer_loop_index]) {
