@@ -4,6 +4,8 @@
 #include <locale.h>
 #include <cuda.h>
 
+void getmaxcu(unsigned int * number, unsigned int * maximum, int size);
+
 __global__
 void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
     extern __shared__ unsigned int data[];
