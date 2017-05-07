@@ -12,13 +12,18 @@ int main(int argc, char * argv[]) {
     unsigned int * number_arr;
 
     if (argc != 2) {
-        printf("Not enough command line arguments. Try again\n");
+        printf("Not enough command line arguments. Try again.\n");
         exit(1);
     }
 
     size = atoi(argv[1]);
 
     number_arr = (unsigned int *) malloc(sizeof(unsigned int) * size);
+
+    if (!number_arr) {
+        printf("Something went wrong when allocating space for number_arr. Try again.\n");
+        exit(1);
+    }
 }
 
 __global__
