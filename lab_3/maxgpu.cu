@@ -6,6 +6,10 @@
 
 void getmaxcu(unsigned int * number, unsigned int * maximum, int size);
 
+int main() {
+    
+}
+
 __global__
 void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
     extern __shared__ unsigned int data[];
