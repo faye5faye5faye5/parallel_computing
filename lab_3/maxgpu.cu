@@ -66,6 +66,9 @@ int main(int argc, char * argv[]) {
 
     int num_blocks = mod_size / threads_per_block;
     unsigned int * device_arr;
+
+    cudaMalloc((void **) &device_arr, sizeof(unsigned int) * mod_size);
+    cudaMemcpy(device_arr, mod_number_arr, sizeof(unsigned int) * mod_size, cudaMemcpyHostToDevice);
 }
 
 __global__
