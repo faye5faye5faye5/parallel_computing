@@ -75,6 +75,11 @@ int main(int argc, char * argv[]) {
     cudaMalloc((void **) &device_max, sizeof(unsigned int) * num_blocks);
 
     unsigned int * host_max = (unsigned int *) malloc(sizeof(unsigned int) * num_blocks);
+
+    do {
+        num_blocks = ceil((float) mod_size / (float) threads_per_block);
+        getmaxcu<<num_blocks, threads_per_block, sizeof(unsigned int) * threads_per_block>>(device_arr, device_max, mod_size);
+    } while (num_blocks > 1);
 }
 
 __global__
