@@ -43,6 +43,15 @@ int main(int argc, char * argv[]) {
     else {
         num_threads = threads_per_block;
     }
+
+    int mod_size = num_threads;
+
+    if (size % threads_per_block != 0) {
+        mod_size = (size / threads_per_block + 1) * threads_per_block;
+    }
+    else {
+        mod_size = size;
+    }
 }
 
 __global__
