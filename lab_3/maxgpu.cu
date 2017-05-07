@@ -6,8 +6,15 @@
 
 void getmaxcu(unsigned int * number, unsigned int * maximum, int size);
 
-int main() {
-    
+int main(int argc, char * argv[]) {
+    unsigned int size = 0;
+    unsigned int loop_index;
+    unsigned int * number;
+
+    if (argc != 2) {
+        printf("Not enough command line arguments. Try again\n");
+        exit(1);
+    }
 }
 
 __global__
