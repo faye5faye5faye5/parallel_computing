@@ -33,6 +33,16 @@ int main(int argc, char * argv[]) {
 
     cudaDeviceProp device_properties;
     cudaGetDeviceProperties(&device_properties, 0);
+
+    int threads_per_block = device_properties.maxThreadsPerBlock;
+    int num_threads;
+
+    if (threads_per_block > size) {
+        num_threads = size;
+    }
+    else {
+        num_threads = threads_per_block;
+    }
 }
 
 __global__
