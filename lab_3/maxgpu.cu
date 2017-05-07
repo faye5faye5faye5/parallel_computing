@@ -15,6 +15,8 @@ int main(int argc, char * argv[]) {
         printf("Not enough command line arguments. Try again\n");
         exit(1);
     }
+
+    size = atoi(argv[1]);
 }
 
 __global__
