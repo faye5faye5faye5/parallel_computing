@@ -52,6 +52,8 @@ int main(int argc, char * argv[]) {
     else {
         mod_size = size;
     }
+
+    unsigned int * mod_number_arr = (unsigned int *) malloc(sizeof(unsigned int) * mod_size);
 }
 
 __global__
