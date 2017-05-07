@@ -24,6 +24,12 @@ int main(int argc, char * argv[]) {
         printf("Something went wrong when allocating space for number_arr. Try again.\n");
         exit(1);
     }
+
+    srand(time(NULL));
+
+    for (loop_index = 0; loop_index < size; loop_index += 1) {
+        
+    }
 }
 
 __global__
