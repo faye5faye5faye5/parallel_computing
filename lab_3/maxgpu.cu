@@ -69,6 +69,12 @@ int main(int argc, char * argv[]) {
 
     cudaMalloc((void **) &device_arr, sizeof(unsigned int) * mod_size);
     cudaMemcpy(device_arr, mod_number_arr, sizeof(unsigned int) * mod_size, cudaMemcpyHostToDevice);
+
+    unsigned int * device_max;
+
+    cudaMalloc((void **) &device_max, sizeof(unsigned int) * num_blocks);
+
+    unsigned int * host_max = (unsigned int *) malloc(sizeof(unsigned int) * num_blocks);
 }
 
 __global__
