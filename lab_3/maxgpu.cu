@@ -54,6 +54,15 @@ int main(int argc, char * argv[]) {
     }
 
     unsigned int * mod_number_arr = (unsigned int *) malloc(sizeof(unsigned int) * mod_size);
+
+    for (loop_index = 0; loop_index < mod_size; loop_index += 1) {
+        if (loop_index < size) {
+            mod_number_arr[loop_index] = number_arr[loop_index];
+        }
+        else {
+            mod_number_arr[loop_index] = 0;
+        }
+    }
 }
 
 __global__
