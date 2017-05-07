@@ -79,7 +79,17 @@ int main(int argc, char * argv[]) {
     do {
         num_blocks = ceil((float) mod_size / (float) threads_per_block);
         getmaxcu<<num_blocks, threads_per_block, sizeof(unsigned int) * threads_per_block>>(device_arr, device_max, mod_size);
+        mod_size = num_blocks;
+        device_arr = device_max;
     } while (num_blocks > 1);
+
+    cudaMemcpy(host_max, device_max, sizeof(unsigned int) * num_blocks, cudaMemcpyDeviceToHost);
+    printf("The maximum number is %u\n", host_max[0]);
+
+    cudaFree(device_arr);
+    cudaFree(device_max);
+    free(number_arr);
+    exit(0);
 }
 
 __global__
