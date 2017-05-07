@@ -28,7 +28,7 @@ int main(int argc, char * argv[]) {
     srand(time(NULL));
 
     for (loop_index = 0; loop_index < size; loop_index += 1) {
-        
+        number_arr[loop_index] = rand() % size;
     }
 }
 
