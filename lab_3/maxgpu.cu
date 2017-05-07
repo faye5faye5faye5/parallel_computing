@@ -16,4 +16,11 @@ void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
     if (index >= size) {
         data[t_id] = 0;
     }
+
+    __syncthreads();
+
+    int loop_index;
+    for (loop_index = blockDim.x / 2; loop_index > 0; loop_index >>= 1) {
+        
+    }
 }
