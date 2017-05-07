@@ -63,6 +63,9 @@ int main(int argc, char * argv[]) {
             mod_number_arr[loop_index] = 0;
         }
     }
+
+    int num_blocks = mod_size / threads_per_block;
+    unsigned int * device_arr;
 }
 
 __global__
