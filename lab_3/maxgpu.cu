@@ -30,4 +30,8 @@ void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
             }
         }
     }
+
+    if (t_id == 0) {
+        maximum[blockIdx.x] = data[0];
+    }
 }
