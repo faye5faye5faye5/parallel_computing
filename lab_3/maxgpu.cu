@@ -9,7 +9,7 @@ void getmaxcu(unsigned int * number, unsigned int * maximum, int size);
 int main(int argc, char * argv[]) {
     unsigned int size;
     unsigned int loop_index;
-    unsigned int * number;
+    unsigned int * number_arr;
 
     if (argc != 2) {
         printf("Not enough command line arguments. Try again\n");
@@ -17,6 +17,8 @@ int main(int argc, char * argv[]) {
     }
 
     size = atoi(argv[1]);
+
+    number_arr = (unsigned int *) malloc(sizeof(unsigned int) * size);
 }
 
 __global__
