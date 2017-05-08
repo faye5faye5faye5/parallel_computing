@@ -92,8 +92,7 @@ int main(int argc, char * argv[]) {
     exit(0);
 }
 
-__global__
-void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
+__global__ void getmaxcu(unsigned int * number, unsigned int * maximum, int size) {
     extern __shared__ unsigned int data[];
 
     unsigned int t_id = threadIdx.x;
