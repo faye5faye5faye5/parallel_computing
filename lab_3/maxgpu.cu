@@ -78,7 +78,7 @@ int main(int argc, char * argv[]) {
 
     do {
         num_blocks = ceil((float) mod_size / (float) threads_per_block);
-        getmaxcu<<num_blocks, threads_per_block, sizeof(unsigned int) * threads_per_block>>(device_arr, device_max, mod_size);
+        getmaxcu<<<num_blocks, threads_per_block, sizeof(unsigned int) * threads_per_block>>>(device_arr, device_max, mod_size);
         mod_size = num_blocks;
         device_arr = device_max;
     } while (num_blocks > 1);
