@@ -10,7 +10,7 @@ __global__ void getmaxcu(unsigned int * number, unsigned int * maximum, int size
     unsigned int t_id = threadIdx.x;
     unsigned int index = blockIdx.x * (blockDim.x) + threadIdx.x;
 
-    data[t_id] = num[index];
+    data[t_id] = number[index];
 
     if (index >= size) {
         data[t_id] = 0;
