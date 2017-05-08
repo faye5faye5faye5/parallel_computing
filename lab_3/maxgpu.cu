@@ -4,8 +4,6 @@
 #include <locale.h>
 #include <cuda.h>
 
-void getmaxcu(unsigned int * number, unsigned int * maximum, int size);
-
 int main(int argc, char * argv[]) {
     unsigned int size;
     unsigned int loop_index;
